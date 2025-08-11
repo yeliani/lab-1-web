@@ -1,12 +1,15 @@
-import Chat from "./chat.jsx";  // Componente que renderiza un chat individual
-import chatsData from "../data/chats.js"; // Array con todos los chats
+import Chat from "./chat.jsx";
+import chatsData from "../data/chats.js"; 
 
 const ListaChat = () => {
+  const elementos = [];
+  chatsData.forEach(chat => {
+    elementos.push(<Chat key={chat.id} chat={chat} />);
+  });
+
   return (
-    <div style={{ overflowY: "auto", flex: 1,padding:"20%", marginLeft:"-15%", marginTop:"-59%",}}>
-      {chatsData.map(chat => (
-        <Chat key={chat.id} chat={chat} />
-      ))}
+    <div style={{ overflowY: "auto", flex: 1, padding: "20%", marginLeft: "-15%", marginTop: "-59%" }}>
+      {elementos}
     </div>
   );
 };

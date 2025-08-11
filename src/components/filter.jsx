@@ -1,7 +1,7 @@
 const styles = {
   active: {
-    backgroundColor: '#00a884',
-    color: 'white',
+    backgroundColor: '#0A332C',
+    color: '#00A86D',
     border: 'none',
     padding: '6px 12px',
     borderRadius: '15px',
@@ -27,7 +27,6 @@ const ChatFilterBar = () => {
     </div>
   );
 };
-console.log("ChatFilterBar cargado", styles);
 
 
 export default ChatFilterBar;
